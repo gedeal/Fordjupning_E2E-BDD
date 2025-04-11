@@ -1,4 +1,3 @@
-# - F001_1 ) User log in to page
 
 Feature: login to page
     *****  User can log in to the page  ******

@@ -5,8 +5,6 @@ from src.pages.search_page import SearchPage
 from playwright.sync_api import Playwright, sync_playwright, expect
 
 
-
-
 @given(u'User chooses the link')
 def step_choose_link(context):
 
@@ -16,7 +14,9 @@ def step_choose_link(context):
     search_page.search_for("Mina vänner")
     # search_page.search_for("Välkommen!")
 
-
+    search_page.get_by("link", "Start")
+    search_page.get_by("link", "Vänlista")
+    search_page.get_by("link", "Ny vän")
     # search_page.search_for("?")
     context.search_page = search_page
 

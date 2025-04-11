@@ -1,5 +1,7 @@
 import re
 from playwright.sync_api import expect
+from time import sleep
+
 
 class SearchPage:
     def __init__(self, page):
@@ -8,6 +10,8 @@ class SearchPage:
 
     def navigate(self):
         self.page.goto("https://forverkliga.se/JavaScript/my-contacts/#/")
+        sleep(1)
+
 
     def search_for(self, query):
         expect(self.page).to_have_title(re.compile(query))
@@ -15,7 +19,8 @@ class SearchPage:
 
         # self.page.get_by_role("heading", name="Välkommen!")
 
-
-
+    def get_by(self, type, txt):
+        self.page.get_by_role(type, name=txt).click()
+        sleep(1)
 
 
