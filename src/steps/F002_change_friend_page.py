@@ -1,13 +1,10 @@
 import re
-
-import playwright
 from behave import given, when, then
 from time import sleep
-
 from src.pages.search_page import SearchPage
 from playwright.sync_api import Playwright, sync_playwright, expect
 
-@given(u'User chooses to change a friend\'s info')
+@given(u'User chooses to change friends info')
 def step_choose_friend(context):
     context.page.goto(context.base_url)
     search_page = SearchPage(context.page)
@@ -23,7 +20,7 @@ def step_choose_friend(context):
      .click()
      )
 
-@when(u'User changes the friend\'s name and epost')
+@when(u'User changes the friends name and epost')
 def step_change_info(context):
 
     context.page.get_by_role("textbox").nth(0).click()
@@ -38,7 +35,7 @@ def step_save_changes(context):
     sleep(0)
 
 
-@then(u'user see friend\'s changes in the list')
+@then(u'user see friends changes in the list')
 def step_verify_changes(context):
     expect(context.page.get_by_text('NAME')).to_be_visible()
     expect(context.page.get_by_text('EMAIL')).to_be_visible()

@@ -26,7 +26,6 @@ def step_impl(context):
     context.page.get_by_role("button").get_by_text("")
 
 
-
 @then(u'page is show')
 def step_see_page(context):
     context.page.get_by_role("button").get_by_text("")
