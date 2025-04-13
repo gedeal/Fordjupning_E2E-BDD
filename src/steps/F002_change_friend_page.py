@@ -39,7 +39,7 @@ def step_save_changes(context):
 def step_verify_changes(context):
     expect(context.page.get_by_text('NAME')).to_be_visible()
     expect(context.page.get_by_text('EMAIL')).to_be_visible()
-    sleep(1)
+    sleep(0)
 
 
 

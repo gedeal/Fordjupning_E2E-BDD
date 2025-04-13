@@ -69,4 +69,4 @@ def step_change_info(context):
 @then(u'system shows error message - email')
 def step_show_error_message(context):
     expect(context.page.get_by_text("Fyll i båda fälten för att ä")).to_be_visible()
-    sleep(2)
+    sleep(0)

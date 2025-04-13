@@ -33,7 +33,7 @@ def step_found_friend_name(context):
     expect(context.page.get_by_text('Spock')).not_to_be_visible()
     expect(context.page.get_by_text('William Riker')).not_to_be_visible()
 
-    sleep(1)
+    sleep(0)
 
 
 #  --------------------------------------------

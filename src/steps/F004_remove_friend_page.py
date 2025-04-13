@@ -17,7 +17,7 @@ def step_choose_friend(context):
     expect(context.page.get_by_text('commander.riker@starfleet.com')).to_be_visible()
     expect(context.page.get_by_text('Jean-Luc Picard')).to_be_visible()
 
-    sleep(1)
+    sleep(0)
 
 
 @when(u'User removes the friend')
@@ -36,4 +36,4 @@ def step_verify(context):
     expect(context.page.get_by_text('William Riker')).not_to_be_visible()
     expect(context.page.get_by_text('commander.riker@starfleet.com')).not_to_be_visible()
     expect(context.page.get_by_text('Jean-Luc Picard')).to_be_visible()
-    sleep(1)
+    sleep(0)

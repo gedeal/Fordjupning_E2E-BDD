@@ -1,0 +1,59 @@
+
+Feature: login to page
+    *****  User can log in to the page  ******
+
+    Scenario: User log in
+        Given User chooses the page link
+        When  User browse the button options
+        Then  first page is show
+
+    Scenario: User has a friend in list
+        Given User chooses to change friends info
+        When  User changes the friends name and epost
+        Then  user saves changes to the list
+        And   user see friends changes in the list
+
+    Scenario: User has a friend name in list
+        Given User chooses to change friend name
+        When  User erases the friend name
+        Then  system shows error message - name
+
+    Scenario: User has a friend email in list
+        Given User chooses to change friend email
+        When  User erases the friend email
+        Then  system shows error message - email
+
+
+    Scenario: User has a friend in the list and removes it
+        Given User has a friend in the list
+        When  User removes the friend
+        Then  friend name is not in the list
+
+
+    Scenario: User has a friend name
+        Given User want to see a friend name in the list
+        When  User search for a friend by name
+        Then  user finds a friend
+
+    Scenario: User has a friend's email
+        Given User has a friend email in the list
+        When  User search for a friend by email
+        Then  user finds a friend email
+
+    Scenario: User adds a friend
+        Given User chooses to add a friend
+        When  User adds a friend and epost
+        Then  user saves friend to the list
+        And   user see friend name in the list
+
+    Scenario: User adds a friend name - email with error
+        Given User chooses to add a friend name
+        When  User adds a name
+        And   User do not add an email
+        Then  System shows error message (name)
+
+    Scenario: User adds a friend email - name with error
+        Given User chooses to add a friend email
+        When  User do not add a name
+        And   User adds a email
+        Then  System shows error message (email)
