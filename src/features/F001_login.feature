@@ -1,6 +1,6 @@
 
 Feature: login to page
-    *****  User can log in to the page  ******
+    *****  User can log in to the initial page  ******
 
     Scenario: User log in
         Given User chooses the page link
